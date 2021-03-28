@@ -6,7 +6,7 @@ const cats = require('../models/catModel');
 
 
 const cat_list_get = async (req, res) => {
-    res.json(await cats.find(where()));
+    res.json(await cats.find());
 };
 
 const cat_get =(req,res) => {
