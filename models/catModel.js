@@ -1,4 +1,5 @@
 'use strict';
+/*
 const cats = [
   {
     id: '1',
@@ -21,3 +22,18 @@ const cats = [
 module.exports = {
   cats,
 };
+*/
+
+const mongoose = require('mongoose');
+
+const Schema = mongoose.Schema;
+
+const catSchema = new Schema({
+  name:  String,
+  age:  Number,
+  gender:   String,
+  color:  String,
+  weight:  Number
+
+});
+module.exports = mongoose.model('Cats', catSchema);
